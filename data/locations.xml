@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='utf-8'?>
+<locations extract_date="2026-08-01" source="HRIS_LEGACY">
+  <location id="LOC001" status="active">
+    <name>Mars Global HQ</name>
+    <address>
+      <city>McLean</city>
+      <country_code>US</country_code>
+      <region>North America</region>
+    </address>
+    <facility type="Office">
+      <timezone>America/New_York</timezone>
+      <headcount_capacity>2346</headcount_capacity>
+    </facility>
+    <local_currency>USD</local_currency>
+    <is_manufacturing_site>N</is_manufacturing_site>
+  </location>
+  <location id="LOC002" status="active">
+    <name>Hackettstown Plant</name>
+    <address>
+      <city>Hackettstown</city>
+      <country_code>US</country_code>
+      <region>North America</region>
+    </address>
+    <facility type="Plant">
+      <timezone>America/New_York</timezone>
+      <headcount_capacity>8214</headcount_capacity>
+    </facility>
+    <local_currency>USD</local_currency>
+    <is_manufacturing_site>true</is_manufacturing_site>
+  </location>
+  <location id="LOC003" status="active">
+    <name>Chicago Plant</name>
+    <address>
+      <city>Chicago</city>
+      <country_code>US</country_code>
+      <region>North America</region>
+    </address>
+    <facility type="Plant">
+      <timezone>America/Chicago</timezone>
+      <headcount_capacity>7040</headcount_capacity>
+    </facility>
+    <local_currency>USD</local_currency>
+    <is_manufacturing_site>Y</is_manufacturing_site>
+  </location>
+  <location id="LOC004" status="active">
+    <name>Slough Office</name>
+    <address>
+      <city>Slough</city>
+      <country_code>GB</country_code>
+      <region>Europe</region>
+    </address>
+    <facility type="Office">
+      <timezone>Europe/London</timezone>
+      <headcount_capacity>3520</headcount_capacity>
+    </facility>
+    <local_currency>GBP</local_currency>
+    <is_manufacturing_site>N</is_manufacturing_site>
+  </location>
+  <location id="LOC005" status="active">
+    <name>Melton Mowbray Plant</name>
+    <address>
+      <city>Melton Mowbray</city>
+      <country_code>GB</country_code>
+      <region>Europe</region>
+    </address>
+    <facility type="Plant">
+      <timezone>Europe/London</timezone>
+      <headcount_capacity>5867</headcount_capacity>
+    </facility>
+    <local_currency>GBP</local_currency>
+    <is_manufacturing_site>true</is_manufacturing_site>
+  </location>
+  <location id="LOC006" status="active">
+    <name>Veghel Plant</name>
+    <address>
+      <city>Veghel</city>
+      <country_code>NL</country_code>
+      <region>Europe</region>
+    </address>
+    <facility type="Plant">
+      <timezone>Europe/Amsterdam</timezone>
+      <headcount_capacity>7040</headcount_capacity>
+    </facility>
+    <local_currency>EUR</local_currency>
+    <is_manufacturing_site>true</is_manufacturing_site>
+  </location>
+  <location id="LOC007" status="active">
+    <name>Viersen Plant</name>
+    <address>
+      <city>Viersen</city>
+      <country_code>DE</country_code>
+      <region>Europe</region>
+    </address>
+    <facility type="Plant">
+      <timezone>Europe/Berlin</timezone>
+      <headcount_capacity>5280</headcount_capacity>
+    </facility>
+    <local_currency>EUR</local_currency>
+    <is_manufacturing_site>true</is_manufacturing_site>
+  </location>
+  <location id="LOC008" status="active">
+    <name>Haguenau Plant</name>
+    <address>
+      <city>Haguenau</city>
+      <country_code>FR</country_code>
+      <region>Europe</region>
+    </address>
+    <facility type="Plant">
+      <timezone>Europe/Paris</timezone>
+      <headcount_capacity>4693</headcount_capacity>
+    </facility>
+    <local_currency>EUR</local_currency>
+    <is_manufacturing_site>true</is_manufacturing_site>
+  </location>
+  <location id="LOC009" status="active">
+    <name>Bengaluru Hub</name>
+    <address>
+      <city>Bengaluru</city>
+      <country_code>IN</country_code>
+      <region>Asia</region>
+    </address>
+    <facility type="Office">
+      <timezone>Asia/Kolkata</timezone>
+      <headcount_capacity>3520</headcount_capacity>
+    </facility>
+    <local_currency>INR</local_currency>
+    <is_manufacturing_site>false</is_manufacturing_site>
+  </location>
+  <location id="LOC010" status="active">
+    <name>Ballarat Plant</name>
+    <address>
+      <city>Ballarat</city>
+      <country_code>AU</country_code>
+      <region>Oceania</region>
+    </address>
+    <facility type="Plant">
+      <timezone>Australia/Melbourne</timezone>
+      <headcount_capacity>2933</headcount_capacity>
+    </facility>
+    <local_currency>AUD</local_currency>
+    <is_manufacturing_site>Y</is_manufacturing_site>
+  </location>
+  <location id="LOC011" status="active">
+    <name>Shanghai Office</name>
+    <address>
+      <city>Shanghai</city>
+      <country_code>CN</country_code>
+      <region>Asia</region>
+    </address>
+    <facility type="Office">
+      <timezone>Asia/Shanghai</timezone>
+      <headcount_capacity>1760</headcount_capacity>
+    </facility>
+    <local_currency>CNY</local_currency>
+    <is_manufacturing_site>N</is_manufacturing_site>
+  </location>
+  <location id="LOC012" status="active">
+    <name>Atlanta Distribution Center</name>
+    <address>
+      <city>Atlanta</city>
+      <country_code>US</country_code>
+      <region>North America</region>
+    </address>
+    <facility type="Distribution Center">
+      <timezone>America/New_York</timezone>
+      <headcount_capacity>2933</headcount_capacity>
+    </facility>
+    <local_currency>USD</local_currency>
+    <is_manufacturing_site>N</is_manufacturing_site>
+  </location>
+  <location id="LOC013" status="active">
+    <name>Rotterdam Distribution Center</name>
+    <address>
+      <city>Rotterdam</city>
+      <country_code>NL</country_code>
+      <region>Europe</region>
+    </address>
+    <facility type="Distribution Center">
+      <headcount_capacity>2346</headcount_capacity>
+    </facility>
+    <local_currency>EUR</local_currency>
+    <is_manufacturing_site>N</is_manufacturing_site>
+  </location>
+</locations>

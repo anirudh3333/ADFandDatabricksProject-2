@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<departments extract_date="2026-08-01">
+  <department id="D100" cost_center="CC1000">
+    <name>Manufacturing</name>
+    <sub_departments>
+      <department id="D110" cost_center="CC1100">
+        <name>Production</name>
+      </department>
+      <department id="D120" cost_center="CC1200">
+        <name>Packaging</name>
+      </department>
+      <department id="D130" cost_center="CC1300">
+        <name>Quality Assurance</name>
+      </department>
+      <department id="D140" cost_center="CC1400">
+        <name>Maintenance &amp; Engineering</name>
+      </department>
+      <department id="D150" cost_center="CC1500">
+        <name>EHS</name>
+      </department>
+    </sub_departments>
+  </department>
+  <department id="D200" cost_center="CC2000">
+    <name>Supply Chain</name>
+    <sub_departments>
+      <department id="D210" cost_center="CC2100">
+        <name>Logistics &amp; Distribution</name>
+      </department>
+      <department id="D220" cost_center="CC2200">
+        <name>Procurement</name>
+      </department>
+      <department id="D230" cost_center="CC2300">
+        <name>Demand &amp; Supply Planning</name>
+      </department>
+    </sub_departments>
+  </department>
+  <department id="D300" cost_center="CC3000">
+    <name>Commercial</name>
+    <sub_departments>
+      <department id="D310" cost_center="CC3100">
+        <name>Sales</name>
+      </department>
+      <department id="D320" cost_center="CC3200">
+        <name>Marketing</name>
+      </department>
+      <department id="D330" cost_center="CC3300">
+        <name>Customer Development</name>
+      </department>
+    </sub_departments>
+  </department>
+  <department id="D400" cost_center="CC4000">
+    <name>R&amp;D</name>
+    <sub_departments>
+      <department id="D410" cost_center="CC4100">
+        <name>Product Development</name>
+      </department>
+    </sub_departments>
+  </department>
+  <department id="D500" cost_center="CC5000">
+    <name>Corporate Functions</name>
+    <sub_departments>
+      <department id="D510" cost_center="CC5100">
+        <name>Human Resources</name>
+      </department>
+      <department id="D520" cost_center="CC5200">
+        <name>Finance</name>
+      </department>
+      <department id="D530" cost_center="CC5300">
+        <name>IT</name>
+      </department>
+      <department id="D540" cost_center="CC5400">
+        <name>Legal &amp; Compliance</name>
+      </department>
+    </sub_departments>
+  </department>
+</departments>

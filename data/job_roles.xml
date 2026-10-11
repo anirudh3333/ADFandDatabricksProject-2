@@ -1,0 +1,493 @@
+<?xml version='1.0' encoding='utf-8'?>
+<job_roles version="1" extract_date="2026-08-01">
+  <job_role id="R1101" grade="G1" hourly="Y">
+    <title>PRODUCTION OPERATOR</title>
+    <department_id>D110</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>28000</min>
+      <max>40000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R1102" grade="G2" hourly="true">
+    <title>Senior Production Operator</title>
+    <department_id>D110</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>36000</min>
+      <max>50000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R1103" grade="G4" hourly="false">
+    <title>Line Lead</title>
+    <department_id>D110</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>48000</min>
+      <max>68000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R1104" grade="G5" hourly="false">
+    <title>Production Supervisor</title>
+    <department_id>D110</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>62000</min>
+      <max>88000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R1105" grade="G7" hourly="false">
+    <title>Production Manager</title>
+    <department_id>D110</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>90000</min>
+      <max>130000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R1201" grade="G1" hourly="true">
+    <title>Packaging Operator</title>
+    <department_id>D120</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>27000</min>
+      <max>38000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R1202" grade="G3" hourly="true">
+    <title>Packaging Technician</title>
+    <department_id>D120</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>38000</min>
+      <max>54000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R1203" grade="G5" hourly="false">
+    <title>Packaging Supervisor</title>
+    <department_id>D120</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>60000</min>
+      <max>84000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R1301" grade="G3" hourly="true">
+    <title>QA Technician</title>
+    <department_id>D130</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>40000</min>
+      <max>56000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R1302" grade="G4" hourly="false">
+    <title>QA Analyst</title>
+    <department_id>D130</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>52000</min>
+      <max>74000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R1303" grade="G7" hourly="false">
+    <title>QA Manager</title>
+    <department_id>D130</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>92000</min>
+      <max>132000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R1401" grade="G3" hourly="Y">
+    <title>Maintenance Technician</title>
+    <department_id>D140</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>45000</min>
+      <max>65000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R1402" grade="G5" hourly="false">
+    <title>Reliability Engineer</title>
+    <department_id>D140</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>70000</min>
+      <max>98000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R1403" grade="G7" hourly="false">
+    <title>Maintenance Manager</title>
+    <department_id>D140</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>95000</min>
+      <max>135000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R1501" grade="G4" hourly="false">
+    <title>EHS Coordinator</title>
+    <department_id>D150</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>55000</min>
+      <max>78000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R1502" grade="G7" hourly="false">
+    <title>EHS Manager</title>
+    <department_id>D150</department_id>
+    <job_family>Manufacturing</job_family>
+    <salary_band currency="USD">
+      <min>90000</min>
+      <max>128000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R2101" grade="G1" hourly="true">
+    <title>Warehouse Associate</title>
+    <department_id>D210</department_id>
+    <job_family>Supply Chain</job_family>
+    <salary_band currency="USD">
+      <min>28000</min>
+      <max>40000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R2102" grade="G2" hourly="true">
+    <title>FORKLIFT OPERATOR</title>
+    <department_id>D210</department_id>
+    <job_family>Supply Chain</job_family>
+    <salary_band currency="USD">
+      <min>33000</min>
+      <max>46000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R2103" grade="G4" hourly="false">
+    <title>Logistics Coordinator</title>
+    <department_id>D210</department_id>
+    <job_family>Supply Chain</job_family>
+    <salary_band currency="USD">
+      <min>50000</min>
+      <max>70000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R2104" grade="G7" hourly="false">
+    <title>Logistics Manager</title>
+    <department_id>D210</department_id>
+    <job_family>Supply Chain</job_family>
+    <salary_band currency="USD">
+      <min>88000</min>
+      <max>125000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R2201" grade="G4" hourly="false">
+    <title>Procurement Analyst</title>
+    <department_id>D220</department_id>
+    <job_family>Supply Chain</job_family>
+    <salary_band currency="USD">
+      <min>58000</min>
+      <max>80000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R2202" grade="G6" hourly="false">
+    <title>Category Manager</title>
+    <department_id>D220</department_id>
+    <job_family>Supply Chain</job_family>
+    <salary_band currency="USD">
+      <min>85000</min>
+      <max>120000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R2203" grade="G9" hourly="N">
+    <title>Procurement Director</title>
+    <department_id>D220</department_id>
+    <job_family>Supply Chain</job_family>
+    <salary_band currency="USD">
+      <min>140000</min>
+      <max>190000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R2301" grade="G4" hourly="false">
+    <title>Planning Analyst</title>
+    <department_id>D230</department_id>
+    <job_family>Supply Chain</job_family>
+    <salary_band currency="USD">
+      <min>56000</min>
+      <max>78000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R2302" grade="G5" hourly="false">
+    <title>Demand Planner</title>
+    <department_id>D230</department_id>
+    <job_family>Supply Chain</job_family>
+    <salary_band currency="USD">
+      <min>66000</min>
+      <max>92000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R2303" grade="G7" hourly="false">
+    <title>Supply Planning Manager</title>
+    <department_id>D230</department_id>
+    <job_family>Supply Chain</job_family>
+    <salary_band currency="USD">
+      <min>95000</min>
+      <max>135000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R3101" grade="G3" hourly="false">
+    <title>Sales Representative</title>
+    <department_id>D310</department_id>
+    <job_family>Commercial</job_family>
+    <salary_band currency="USD">
+      <min>48000</min>
+      <max>68000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R3102" grade="G5" hourly="false">
+    <title>Key Account Manager</title>
+    <department_id>D310</department_id>
+    <job_family>Commercial</job_family>
+    <salary_band currency="USD">
+      <min>75000</min>
+      <max>105000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R3103" grade="G7" hourly="false">
+    <title>Sales Manager</title>
+    <department_id>D310</department_id>
+    <job_family>Commercial</job_family>
+    <salary_band currency="USD">
+      <min>100000</min>
+      <max>145000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R3104" grade="G9" hourly="false">
+    <title>Sales Director</title>
+    <department_id>D310</department_id>
+    <job_family>Commercial</job_family>
+    <salary_band currency="USD">
+      <min>150000</min>
+      <max>210000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R3201" grade="G3" hourly="false">
+    <title>Marketing Executive</title>
+    <department_id>D320</department_id>
+    <job_family>Commercial</job_family>
+    <salary_band currency="USD">
+      <min>48000</min>
+      <max>66000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R3202" grade="G6" hourly="false">
+    <title>Brand Manager</title>
+    <department_id>D320</department_id>
+    <job_family>Commercial</job_family>
+    <salary_band currency="USD">
+      <min>82000</min>
+      <max>118000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R3203" grade="G9" hourly="false">
+    <title>Marketing Director</title>
+    <department_id>D320</department_id>
+    <job_family>Commercial</job_family>
+    <salary_band currency="USD">
+      <min>150000</min>
+      <max>210000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R3301" grade="G4" hourly="N">
+    <title>Customer Development Analyst</title>
+    <department_id>D330</department_id>
+    <job_family>Commercial</job_family>
+    <salary_band currency="USD">
+      <min>58000</min>
+      <max>80000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R3302" grade="G7" hourly="false">
+    <title>CUSTOMER DEVELOPMENT MANAGER</title>
+    <department_id>D330</department_id>
+    <job_family>Commercial</job_family>
+    <salary_band currency="USD">
+      <min>98000</min>
+      <max>138000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R4101" grade="G4" hourly="false">
+    <title>Food Scientist</title>
+    <department_id>D410</department_id>
+    <job_family>R&amp;D</job_family>
+    <salary_band currency="USD">
+      <min>62000</min>
+      <max>88000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R4102" grade="G6" hourly="false">
+    <title>Senior Food Scientist</title>
+    <department_id>D410</department_id>
+    <job_family>R&amp;D</job_family>
+    <salary_band currency="USD">
+      <min>85000</min>
+      <max>118000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R4103" grade="G8" hourly="false">
+    <title>R&amp;D Manager</title>
+    <department_id>D410</department_id>
+    <job_family>R&amp;D</job_family>
+    <salary_band currency="USD">
+      <min>115000</min>
+      <max>160000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R5101" grade="G3" hourly="false">
+    <title>HR Coordinator</title>
+    <department_id>D510</department_id>
+    <job_family>Corporate Functions</job_family>
+    <salary_band currency="USD">
+      <min>42000</min>
+      <max>58000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R5102" grade="G6" hourly="false">
+    <title>HR Business Partner</title>
+    <department_id>D510</department_id>
+    <job_family>Corporate Functions</job_family>
+    <salary_band currency="USD">
+      <min>80000</min>
+      <max>112000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R5103" grade="G9" hourly="false">
+    <title>HR Director</title>
+    <department_id>D510</department_id>
+    <job_family>Corporate Functions</job_family>
+    <salary_band currency="USD">
+      <min>140000</min>
+      <max>195000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R5201" grade="G4" hourly="false">
+    <title>Financial Analyst</title>
+    <department_id>D520</department_id>
+    <job_family>Corporate Functions</job_family>
+    <salary_band currency="USD">
+      <min>58000</min>
+      <max>82000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R5202" grade="G7" hourly="false">
+    <title>Finance Manager</title>
+    <department_id>D520</department_id>
+    <job_family>Corporate Functions</job_family>
+    <salary_band currency="USD">
+      <min>95000</min>
+      <max>135000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R5203" grade="G9" hourly="false">
+    <title>Finance Director</title>
+    <department_id>D520</department_id>
+    <job_family>Corporate Functions</job_family>
+    <salary_band currency="USD">
+      <min>145000</min>
+      <max>200000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R5301" grade="G3" hourly="N">
+    <title>IT Support Analyst</title>
+    <department_id>D530</department_id>
+    <job_family>Corporate Functions</job_family>
+    <salary_band currency="USD">
+      <min>46000</min>
+      <max>64000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R5302" grade="G5" hourly="false">
+    <title>Data Engineer</title>
+    <department_id>D530</department_id>
+    <job_family>Corporate Functions</job_family>
+    <salary_band currency="USD">
+      <min>78000</min>
+      <max>110000</max>
+    </salary_band>
+    <people_manager>false</people_manager>
+  </job_role>
+  <job_role id="R5303" grade="G7" hourly="false">
+    <title>IT Manager</title>
+    <department_id>D530</department_id>
+    <job_family>Corporate Functions</job_family>
+    <salary_band currency="USD">
+      <min>105000</min>
+      <max>148000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R5401" grade="G6" hourly="false">
+    <title>Legal Counsel</title>
+    <department_id>D540</department_id>
+    <job_family>Corporate Functions</job_family>
+    <salary_band currency="USD">
+      <min>95000</min>
+      <max>140000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+  <job_role id="R5402" grade="G7" hourly="false">
+    <title>Compliance Manager</title>
+    <department_id>D540</department_id>
+    <job_family>Corporate Functions</job_family>
+    <salary_band currency="USD">
+      <min>100000</min>
+      <max>140000</max>
+    </salary_band>
+    <people_manager>true</people_manager>
+  </job_role>
+</job_roles>
