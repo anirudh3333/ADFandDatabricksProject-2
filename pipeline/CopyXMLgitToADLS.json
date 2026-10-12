@@ -28,12 +28,9 @@
 						}
 					},
 					"sink": {
-						"type": "ParquetSink",
+						"type": "BinarySink",
 						"storeSettings": {
 							"type": "AzureBlobFSWriteSettings"
-						},
-						"formatSettings": {
-							"type": "ParquetWriteSettings"
 						}
 					},
 					"enableStaging": false
@@ -49,7 +46,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ParquetXMLDateset",
+						"referenceName": "ADLSBinaryDS",
 						"type": "DatasetReference",
 						"parameters": {
 							"container": "bronze",
