@@ -1,0 +1,25 @@
+{
+	"name": "GitBinaruDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "GitXMLLS",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"relativeURL": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@dataset().relativeURL",
+					"type": "Expression"
+				}
+			}
+		}
+	}
+}
