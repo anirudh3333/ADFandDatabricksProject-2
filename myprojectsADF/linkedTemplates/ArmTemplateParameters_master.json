@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "myprojectsADF"
+		},
+		"ADLSGen2LS_accountKey": {
+			"value": ""
+		},
+		"ADLSGen2LS_properties_typeProperties_url": {
+			"value": "https://myprojectssa.dfs.core.windows.net/"
+		},
+		"GitXMLLS_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/anirudh3333/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
