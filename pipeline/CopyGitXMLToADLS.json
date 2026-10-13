@@ -1,5 +1,5 @@
 {
-	"name": "CopyXMLgitToADLS",
+	"name": "CopyGitXMLToADLS",
 	"properties": {
 		"activities": [
 			{
