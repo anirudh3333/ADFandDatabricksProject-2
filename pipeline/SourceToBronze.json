@@ -38,6 +38,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -65,7 +66,7 @@
 					"isSequential": false,
 					"activities": [
 						{
-							"name": "Get MetadataFileDetails",
+							"name": "GetMetadataFileDetails",
 							"type": "GetMetadata",
 							"dependsOn": [],
 							"policy": {
@@ -102,11 +103,188 @@
 								],
 								"storeSettings": {
 									"type": "AzureBlobFSReadSettings",
+									"recursive": true,
 									"enablePartitionDiscovery": false
 								},
 								"formatSettings": {
 									"type": "DelimitedTextReadSettings"
 								}
+							}
+						},
+						{
+							"name": "ScriptToGetFileDetails",
+							"type": "Script",
+							"dependsOn": [
+								{
+									"activity": "GetMetadataFileDetails",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"linkedServiceName": {
+								"referenceName": "AzureSqlDatabase",
+								"type": "LinkedServiceReference"
+							},
+							"typeProperties": {
+								"scripts": [
+									{
+										"type": "Query",
+										"text": {
+											"value": "SELECT COUNT(*) AS C\nFROM etl_bronze_file_log\nWHERE source_name = '@{activity('GetMetadataFileDetails').output.itemName}'\n  AND file_last_modified = CONVERT(\n      datetime2(0),\n      '@{formatDateTime(activity('GetMetadataFileDetails').output.lastModified, 'yyyy-MM-dd HH:mm:ss')}'\n  )",
+											"type": "Expression"
+										}
+									}
+								],
+								"scriptBlockExecutionTimeout": "02:00:00"
+							}
+						},
+						{
+							"name": "IfFileExists",
+							"type": "IfCondition",
+							"dependsOn": [
+								{
+									"activity": "ScriptToGetFileDetails",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"userProperties": [],
+							"typeProperties": {
+								"expression": {
+									"value": "@less(activity('ScriptToGetFileDetails').output.resultSets.rows.C , 0)",
+									"type": "Expression"
+								},
+								"ifTrueActivities": [
+									{
+										"name": "CopyToBronze",
+										"type": "Copy",
+										"dependsOn": [],
+										"policy": {
+											"timeout": "0.12:00:00",
+											"retry": 0,
+											"retryIntervalInSeconds": 30,
+											"secureOutput": false,
+											"secureInput": false
+										},
+										"userProperties": [],
+										"typeProperties": {
+											"source": {
+												"type": "DelimitedTextSource",
+												"storeSettings": {
+													"type": "AzureBlobFSReadSettings",
+													"recursive": true,
+													"enablePartitionDiscovery": false
+												},
+												"formatSettings": {
+													"type": "DelimitedTextReadSettings"
+												}
+											},
+											"sink": {
+												"type": "DelimitedTextSink",
+												"storeSettings": {
+													"type": "AzureBlobFSWriteSettings"
+												},
+												"formatSettings": {
+													"type": "DelimitedTextWriteSettings",
+													"quoteAllText": true,
+													"fileExtension": ".txt"
+												}
+											},
+											"enableStaging": false,
+											"translator": {
+												"type": "TabularTranslator",
+												"typeConversion": true,
+												"typeConversionSettings": {
+													"allowDataTruncation": true,
+													"treatBooleanAsNumber": false
+												}
+											}
+										},
+										"inputs": [
+											{
+												"referenceName": "SourceDataset",
+												"type": "DatasetReference",
+												"parameters": {
+													"container": {
+														"value": "@pipeline().parameters.container",
+														"type": "Expression"
+													},
+													"dir": {
+														"value": "@pipeline().parameters.dir",
+														"type": "Expression"
+													},
+													"file": {
+														"value": "@activity('GetMetadataFileDetails').output.itemName",
+														"type": "Expression"
+													}
+												}
+											}
+										],
+										"outputs": [
+											{
+												"referenceName": "SourceDataset",
+												"type": "DatasetReference",
+												"parameters": {
+													"container": "bronze",
+													"dir": {
+														"value": "@pipeline().parameters.dir",
+														"type": "Expression"
+													},
+													"file": {
+														"value": "@activity('GetMetadataFileDetails').output.itemName",
+														"type": "Expression"
+													}
+												}
+											}
+										]
+									},
+									{
+										"name": "ScriptToUpdateCopyData",
+										"type": "Script",
+										"dependsOn": [
+											{
+												"activity": "CopyToBronze",
+												"dependencyConditions": [
+													"Succeeded"
+												]
+											}
+										],
+										"policy": {
+											"timeout": "0.12:00:00",
+											"retry": 0,
+											"retryIntervalInSeconds": 30,
+											"secureOutput": false,
+											"secureInput": false
+										},
+										"userProperties": [],
+										"linkedServiceName": {
+											"referenceName": "AzureSqlDatabase",
+											"type": "LinkedServiceReference"
+										},
+										"typeProperties": {
+											"scripts": [
+												{
+													"type": "Query",
+													"text": {
+														"value": "INSERT INTO etl_file_log\n  (source_name, file_name, file_last_modified, file_size, raw_path, batch_id)\nVALUES (\n  '@{pipeline().parameters.dir}',\n  '@{activity('GetMetadataFileDetails').output.itemName}',\n  CONVERT(\n      datetime2(0),\n      '@{formatDateTime(activity('GetMetadataFileDetails').output.lastModified, 'yyyy-MM-dd HH:mm:ss')}'\n  ),\n  @{activity('GetMetadataFileDetails').output.size},\n  '@{pipeline().parameters.container}'/@{pipeline().parameters.dir}'/CONVERT(\n      datetime2(0),\n      '@{formatDateTime(activity('GetMetadataFileDetails').output.lastModified, 'yyyy-MM-dd HH:mm:ss')}'\n  )/'@{activity('GetMetadataFileDetails').output.size}',\n  '@{pipeline().RunId}'\n);",
+														"type": "Expression"
+													}
+												}
+											],
+											"scriptBlockExecutionTimeout": "02:00:00"
+										}
+									}
+								]
 							}
 						}
 					]
