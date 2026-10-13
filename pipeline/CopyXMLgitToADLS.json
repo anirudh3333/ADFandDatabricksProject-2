@@ -49,7 +49,7 @@
 						"parameters": {
 							"container": "bronze",
 							"dir": "xml",
-							"file": "departments"
+							"file": "departments.xml"
 						}
 					}
 				]
