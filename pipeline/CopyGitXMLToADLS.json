@@ -38,7 +38,7 @@
 						"referenceName": "GitBinaruDS",
 						"type": "DatasetReference",
 						"parameters": {
-							"relativeURL": "ADFandDatabricksProject-2/refs/heads/main/data/locations.xml"
+							"relativeURL": "ADFandDatabricksProject-2/refs/heads/main/data/job_roles.xml"
 						}
 					}
 				],
@@ -47,9 +47,9 @@
 						"referenceName": "ADLSBinaryDS",
 						"type": "DatasetReference",
 						"parameters": {
-							"container": "bronze",
+							"container": "source",
 							"dir": "xml",
-							"file": "locations.xml"
+							"file": "job_roles.xml"
 						}
 					}
 				]
