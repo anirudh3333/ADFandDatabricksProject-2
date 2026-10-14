@@ -164,6 +164,17 @@
 									"value": "@less(activity('ScriptToGetFileDetails').output.resultSets[0].rows[0].C , 1)",
 									"type": "Expression"
 								},
+								"ifFalseActivities": [
+									{
+										"name": "Wait1",
+										"type": "Wait",
+										"dependsOn": [],
+										"userProperties": [],
+										"typeProperties": {
+											"waitTimeInSeconds": 1
+										}
+									}
+								],
 								"ifTrueActivities": [
 									{
 										"name": "CopyToBronze",
