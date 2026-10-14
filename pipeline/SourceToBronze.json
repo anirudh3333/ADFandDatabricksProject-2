@@ -161,7 +161,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@less(activity('ScriptToGetFileDetails').output.resultSets.rows.C , 0)",
+									"value": "@less(activity('ScriptToGetFileDetails').output.resultSets[0].rows[0].C , 0)",
 									"type": "Expression"
 								},
 								"ifTrueActivities": [
