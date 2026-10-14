@@ -287,7 +287,7 @@
 												{
 													"type": "Query",
 													"text": {
-														"value": "\nINSERT INTO etl_file_log\n(\n    source_name,\n    file_name,\n    file_last_modified,\n    file_size,\n    raw_path,\n    batch_id\n)\nVALUES\n(\n    '@{pipeline().parameters.dir}',\n    '@{activity('GetMetadataFileDetails').output.itemName}',\n    CONVERT(\n        datetime2(0),\n        '@{formatDateTime(activity('GetMetadataFileDetails').output.lastModified, 'yyyy-MM-dd HH:mm:ss')}'\n    ),\n    @{activity('GetMetadataFileDetails').output.size},\n    CONCAT(\n        '@{pipeline().parameters.container}',\n        '/',\n        '@{pipeline().parameters.dir}',\n        '/',\n        '@{activity('GetMetadataFileDetails').output.itemName}'\n    ),\n    '@{pipeline().RunId}'\n);\n",
+														"value": "\nINSERT INTO etl_bronze_file_log\n(\n    source_name,\n    file_name,\n    file_last_modified,\n    file_size,\n    raw_path,\n    batch_id\n)\nVALUES\n(\n    '@{pipeline().parameters.dir}',\n    '@{activity('GetMetadataFileDetails').output.itemName}',\n    CONVERT(\n        datetime2(0),\n        '@{formatDateTime(activity('GetMetadataFileDetails').output.lastModified, 'yyyy-MM-dd HH:mm:ss')}'\n    ),\n    @{activity('GetMetadataFileDetails').output.size},\n    CONCAT(\n        '@{pipeline().parameters.container}',\n        '/',\n        '@{pipeline().parameters.dir}',\n        '/',\n        '@{activity('GetMetadataFileDetails').output.itemName}'\n    ),\n    '@{pipeline().RunId}'\n);\n",
 														"type": "Expression"
 													}
 												}
