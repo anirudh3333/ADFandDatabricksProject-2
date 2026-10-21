@@ -139,7 +139,7 @@
 									{
 										"type": "Query",
 										"text": {
-											"value": "SELECT COUNT(*) AS C\nFROM etl_bronze_file_log\nWHERE source_name = '@{activity('GetMetadataFileDetails').output.itemName}'\n  AND file_last_modified = CONVERT(\n      datetime2(0),\n      '@{formatDateTime(activity('GetMetadataFileDetails').output.lastModified, 'yyyy-MM-dd HH:mm:ss')}'\n  )",
+											"value": "SELECT COUNT(*) AS C FROM etl_bronze_file_log WHERE source_name='@{activity('GetMetadataFileDetails').output.itemName}' AND file_last_modified = CONVERT(\n      datetime2(0),\n      '@{formatDateTime(activity('GetMetadataFileDetails').output.lastModified, 'yyyy-MM-dd HH:mm:ss')}'\n  )",
 											"type": "Expression"
 										}
 									}
