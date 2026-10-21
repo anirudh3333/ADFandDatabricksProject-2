@@ -139,7 +139,7 @@
 									{
 										"type": "Query",
 										"text": {
-											"value": "SELECT COUNT(*) AS C FROM etl_bronze_file_log WHERE source_name='@{activity('GetMetadataFileDetails').output.itemName}' AND file_last_modified = CONVERT(\n      datetime2(0),\n      '@{formatDateTime(activity('GetMetadataFileDetails').output.lastModified, 'yyyy-MM-dd HH:mm:ss')}'\n  )",
+											"value": "SELECT COUNT(*) AS C FROM etl_bronze_file_log WHERE source_name='@{activity('GetMetadataFileDetails').output.itemName}' AND file_last_modified=CONVERT(datetime2(0),'@{formatDateTime(activity('GetMetadataFileDetails').output.lastModified,'yyyy-MM-dd HH:mm:ss')}');",
 											"type": "Expression"
 										}
 									}
@@ -287,7 +287,7 @@
 												{
 													"type": "Query",
 													"text": {
-														"value": "\nINSERT INTO etl_bronze_file_log\n(\n    source_name,\n    file_name,\n    file_last_modified,\n    file_size,\n    raw_path,\n    batch_id\n)\nVALUES\n(\n    '@{pipeline().parameters.dir}',\n    '@{activity('GetMetadataFileDetails').output.itemName}',\n    CONVERT(\n        datetime2(0),\n        '@{formatDateTime(activity('GetMetadataFileDetails').output.lastModified, 'yyyy-MM-dd HH:mm:ss')}'\n    ),\n    @{activity('GetMetadataFileDetails').output.size},\n    CONCAT(\n        '@{pipeline().parameters.container}',\n        '/',\n        '@{pipeline().parameters.dir}',\n        '/',\n        '@{activity('GetMetadataFileDetails').output.itemName}'\n    ),\n    '@{pipeline().RunId}'\n);\n",
+														"value": "INSERT INTO etl_bronze_file_log (source_name, file_name, file_last_modified, file_size, raw_path, batch_id) VALUES ('@{pipeline().parameters.dir}', '@{activity('GetMetadataFileDetails').output.itemName}', CONVERT(datetime2(0), '@{formatDateTime(activity('GetMetadataFileDetails').output.lastModified, 'yyyy-MM-dd HH:mm:ss')}'), @{activity('GetMetadataFileDetails').output.size}, CONCAT('@{pipeline().parameters.container}', '/', '@{pipeline().parameters.dir}', '/', '@{activity('GetMetadataFileDetails').output.itemName}'), '@{pipeline().RunId}');",
 														"type": "Expression"
 													}
 												}
