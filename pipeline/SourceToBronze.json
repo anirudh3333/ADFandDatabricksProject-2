@@ -309,7 +309,7 @@
 			},
 			"dir": {
 				"type": "string",
-				"defaultValue": "attendance"
+				"defaultValue": "employee_changes"
 			},
 			"file": {
 				"type": "string",
